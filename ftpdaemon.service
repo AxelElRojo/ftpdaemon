@@ -1,0 +1,10 @@
+[Unit]
+Description=FTP daemon that monitors changes in a directory
+After=network-online.target
+Requires=network-online.target
+
+[Service]
+ExecStart=/usr/bin/python /opt/ftpdaemon/ftpdaemon.py
+
+[Install]
+WantedBy=multi-user.target
